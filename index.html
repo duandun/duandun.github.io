@@ -12,7 +12,7 @@ layout: default
                 {{ post.subtitle }}
             </h3>
         </a>
-        <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on {{ post.date | date: "%b %-d, %Y" }}</p>
+        <p class="post-meta">Posted by <a href="#">{{site.author}}</a> on {{ post.date | date: "%b %-d, %Y" }}</p>
     </div>
     <hr>
     {% endfor %}
@@ -55,16 +55,5 @@ layout: default
             <a href="#">Older Posts &rarr;</a>
         </li>
     </ul>
-          
 
     <hr>
-
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
