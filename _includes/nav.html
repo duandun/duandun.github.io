@@ -21,8 +21,23 @@
                     <li>
                         <a href="/page/about.html">About</a>
                     </li>
-                    <li>
-                        <a href="">Post</a>
+                    <li >
+                    
+                      <a class="dropdown-toggle"  data-toggle="dropdown" href="#"   >
+                        Post
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" role="menu">
+                      {% for post in site.posts %}
+                          <li>
+                              <a href="{{ post.url }}" style="color:black; padding:5px;">
+                                {{ post.title }}
+                              </a>
+                          </li> 
+                        {% endfor %}
+                        </ul>
+                    
+                        <!-- <a href="">Post</a> -->
                     </li>
                     <li>
                         <a href="/page/contact.html">Contact</a>
@@ -32,4 +47,15 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
+        <script>
+
+        // $(".dropdown").hover(function() {
+        //    // console.log('hh');
+        //     $(".dropdown-toggle").dropdown('toggle');
+        // }, function() {
+        //      Stuff to do when the mouse leaves the element 
+        //     // $(".dropdown-menu").hide();
+        //     $(".dropdown-toggle").dropdown('toggle');
+        // });
+        </script>
     </nav>
